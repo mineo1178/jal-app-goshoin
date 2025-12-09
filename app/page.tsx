@@ -1,7 +1,8 @@
 'use client'; // ← Next.jsでこのアプリを動かすための必須コード
 
 import React, { useState, useEffect, useMemo, memo } from 'react';
-import { Plane, Calendar, CheckCircle2, Award, Home, ListFilter, Search, X } from 'lucide-react';
+import { Calendar, CheckCircle2, Award, Home, ListFilter, Search, X } from 'lucide-react'; 
+// ↑ Plane は使わなくなったので削除しました
 
 // --- 以下、アプリのロジックは同じです ---
 
@@ -624,9 +625,7 @@ export default function JALStampApp() {
       <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-30">
         <div className="max-w-md mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="bg-red-600 text-white p-1.5 rounded-lg shadow-sm">
-              <Plane size={18} fill="currentColor" />
-            </div>
+            <img src="/icon.png" alt="App Icon" className="w-8 h-8 rounded-lg shadow-sm" />
             <h1 className="text-xl font-black tracking-tight text-gray-900">
               JAL<span className="text-red-600">御翔印</span>LOG
             </h1>
